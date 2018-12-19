@@ -3,10 +3,12 @@
 ## Description
 Assignment
 
-## To Clone
-git clone https://github.com/karinlj/Responsive-project.git
+##Prerequisites
+NodeJS
 
 ## Installation
+git clone https://github.com/karinlj/Responsive-project.git
+
 To install
 
 ```npm install```
