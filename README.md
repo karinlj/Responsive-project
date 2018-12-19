@@ -8,6 +8,7 @@ NodeJS
 
 ## Installation
 To clone
+
 ```git clone https://github.com/karinlj/Responsive-project.git && cd Responsive-project```
 
 
