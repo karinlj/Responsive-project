@@ -6,6 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Lato", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f4f4f4;
 }
 
 code {
@@ -216,7 +217,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   padding: 0;
-  box-sizing: border-box; //so the lines stay inside btn
+  box-sizing: border-box; //so lines stay inside btn
 
   &:focus {
     outline: none; //when clicking-no outline
@@ -241,6 +242,7 @@ a {
 }
 //home
 .home-section {
+  min-height: 500px;
   h2.heading {
     text-align: center;
     position: relative;
@@ -257,7 +259,7 @@ a {
     }
     span {
       display: inline-block;
-      background: white;
+      background: #f4f4f4;
       padding: 0 26px;
       position: relative;
       z-index: 100;
@@ -292,7 +294,7 @@ a {
         position: relative;
         overflow: hidden;
         min-height: 360px;
-        border: 1px solid #b9b9b9;
+        // border: 1px solid #b9b9b9;
 
         .img-block-element {
           position: absolute;
@@ -475,8 +477,4 @@ a {
       display: block;
     }
   }
-}
-
-.home-section {
-  min-height: 500px;
 }
