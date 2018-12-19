@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+a {
+  color: #3c3c3b;
+  &:hover {
+    color: #3c3c3b;
+  }
+}
 //header
 #header {
   position: relative;
@@ -171,7 +177,114 @@ code {
     display: none;
   } */
 }
+//home
+.home-section {
+  h2.heading {
+    text-align: center;
+    position: relative;
+    font-size: 54px;
+    line-height: 78px;
+    font-weight: 900;
+    text-align: center;
+    color: #8a8a8a;
+    text-align: center;
+    span {
+      display: inline-block;
+      background: white;
+      padding: 0 26px;
+      position: relative;
+      z-index: 100;
+    }
+    &:before {
+      content: "";
+      height: 1px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      top: 50%;
+      background-color: #b9b9b9;
+      opacity: .5;
+    }
+  }
+  .img-block-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
+    .img-block-wrapper {
+      flex: 0 0 100%;
+      padding: 1%;
+
+      @media all and (min-width: $lg-min) {
+        flex: 0 0 50%;
+      }
+
+      .img-block {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        min-height: 360px;
+        border: 1px solid #b9b9b9;
+
+        .img-block-element {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: transform ease .9s;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          -webkit-filter: brightness(100%);
+
+          &:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+          }
+        }
+        .block-text {
+          background-color: white;
+          position: relative;
+          // flex-grow: 1;
+          padding: 35px 25px;
+          display: flex;
+          z-index: 100;
+
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+
+          a {
+            text-decoration: none;
+          }
+          h3 {
+            font-size: 1.8em;
+            font-weight: 900;
+            word-wrap: break-word;
+          }
+
+          @media all and (min-width: $sm-min) {
+            position: absolute;
+            //  align-self: flex-end;
+            left: 0;
+            bottom: 0;
+            padding: 65px 26px 52px 26px;
+            /*  width: calc(50% - 13px);
+            min-height: calc(25% - 13px); */
+            width: 50%;
+            min-height: 25%;
+          }
+        }
+      }
+    }
+  }
+}
 //footer
 .footer-section {
   padding: 3.25rem 0;
