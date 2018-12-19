@@ -7,7 +7,7 @@ Assignment
 NodeJS
 
 ## Installation
-git clone https://github.com/karinlj/Responsive-project.git
+git clone https://github.com/karinlj/Responsive-project.git && cd Responsive-project
 
 To install
 
