@@ -1,10 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-//import ToggleBtn from "./ToggleBtn";
+//import { NavLink } from "react-router-dom";
 
 const Navbar = props => {
   //nav classes for hide or show
-  let navbarClasses = !props.showNavbar ? "navbar" : "navbar show";
+  let navbarClasses = !props.showNavbar ? "nav" : "nav show";
 
   return (
     <nav className={navbarClasses}>
@@ -14,7 +13,7 @@ const Navbar = props => {
           <div className="col">
             <ul className="links">
               <li>
-                <NavLink to="https://itera.no/en/#37">What we do</NavLink>
+                <a href="https://itera.no/en/#37">What we do</a>{" "}
               </li>
 
               <li>

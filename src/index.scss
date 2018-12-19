@@ -12,6 +12,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+// Container
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media all and (min-width: 1580px) {
+    max-width: 1500px;
+  }
+}
+
+//margins
+.footer-section,
+header {
+  padding: 0 calc(1.5rem - 15px);
+
+  @media all and (min-width: $sm-min) {
+    padding: 0 calc(2.25rem - 15px);
+  }
+
+  @media all and (min-width: $md-min) {
+    padding: 0 calc(3rem - 15px);
+  }
+
+  @media all and (min-width: $xl-min) {
+    padding: 0 calc(3.75rem - 15px);
+  }
+}
+
+.content-section {
+  padding: 2.25rem calc(1.5rem - 15px);
+
+  @media all and (min-width: $sm-min) {
+    padding: 3rem calc(2.25rem - 15px);
+  }
+
+  @media all and (min-width: $md-min) {
+    padding: 3rem calc(3rem - 15px);
+  }
+
+  @media all and (min-width: $xl-min) {
+    padding: 4.5rem calc(3.75rem - 15px);
+  }
+}
+
 a {
   color: #3c3c3b;
   &:hover {
@@ -21,11 +66,14 @@ a {
 //header
 #header {
   position: relative;
-  height: 710px;
+  height: 640px;
   background: url(https://itera-cdn.azureedge.net/globalassets/all-images/071a0028.jpg)
     no-repeat center;
   background-size: cover;
   color: #fff;
+  @media all and (min-width: $lg-min) {
+    height: 710px;
+  }
 
   &:before {
     position: absolute;
@@ -38,17 +86,32 @@ a {
     display: block;
   }
   .logo {
-    max-width: 200px;
+    max-width: 100px;
     position: relative;
     z-index: 1000;
+    padding-bottom: 0.3rem;
+    @media all and (min-width: $sm-min) {
+      max-width: 150px;
+      padding-bottom: 0.5rem;
+    }
+    @media all and (min-width: $lg-min) {
+      max-width: 200px;
+    }
     img {
       max-width: 100%;
     }
   }
   .header-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: 30%;
+    color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    @media all and (min-width: $lg-min) {
+      bottom: 20%;
+    }
+
     .headerText {
       text-align: center;
       opacity: 0;
@@ -61,6 +124,9 @@ a {
       h1 {
         font-size: 2.5em;
         font-weight: 900;
+        @media all and (min-width: $sm-min) {
+          font-size: 3em;
+        }
         @media all and (min-width: $md-min) {
           font-size: 3.5em;
         }
@@ -69,8 +135,14 @@ a {
         }
       }
       h4 {
-        font-size: 1.6em;
+        font-size: 1.3em;
         font-weight: 300;
+        @media all and (min-width: $md-min) {
+          font-size: 1.4em;
+        }
+        @media all and (min-width: $lg-min) {
+          font-size: 1.6em;
+        }
       }
     }
     .headerText.show {
@@ -80,36 +152,28 @@ a {
 }
 
 //navbar
-.navbar {
+.nav {
   background: #3c3c3b;
-  //opacity: .9;
   height: 100%;
-  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
-  // width: 70%;
-  //max-width: 400px;
   z-index: 200;
-  overflow-y: auto;
   pointer-events: none;
-
   opacity: 0;
   transition: opacity .6s;
   visibility: hidden;
-  background: #3c3c3b;
   color: white;
-  /*  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; */
 }
-
 .links {
-  padding: 8rem 0 0 0;
+  padding: 10rem 0 0 0;
   margin: 0;
   display: block;
+  @media all and (min-width: $sm-min) {
+    padding: 16rem 0 0 0;
+  }
 
   li {
     display: block;
@@ -118,37 +182,17 @@ a {
     a {
       color: #fff;
       font-weight: 900;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       color: #fff;
+      @media all and (min-width: $lg-min) {
+        font-size: 2rem;
+      }
     }
   }
 }
 
-/*   transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-
-  transition: transform 0.5s ease-out;
-  -webkit-transition: transform 0.5s ease-out;
-  -moz-transition: transform 0.5s ease-out;
-  -ms-transition: transform 0.5s ease-out;
-  -o-transition: transform 0.5s ease-out; */
-
-/*  @media all and (min-width: $lg-min) {
-    display: none;
-  } 
-}*/
-
-.navbar.show {
-  /*   transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0); */
-
+.nav.show {
   pointer-events: all;
   opacity: 0.8;
   visibility: visible;
@@ -158,8 +202,8 @@ a {
 .toggle-btn {
   position: relative;
   z-index: 1000;
-  height: 38px;
-  width: 40px;
+  height: 30px;
+  width: 32px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -172,11 +216,18 @@ a {
   &:focus {
     outline: none; //when clicking-no outline
   }
+  @media all and (min-width: $lg-min) {
+    height: 38px;
+    width: 40px;
+  }
 
   .toggle-btn-line {
-    width: 40px;
+    width: 32px;
     height: 3px;
     background: #fff;
+    @media all and (min-width: $lg-min) {
+      width: 40px;
+    }
   }
 
   /*   @media all and (min-width: $lg-min) {
@@ -188,12 +239,17 @@ a {
   h2.heading {
     text-align: center;
     position: relative;
-    font-size: 54px;
-    line-height: 78px;
+    font-size: 2.2em;
     font-weight: 900;
     text-align: center;
     color: #8a8a8a;
     text-align: center;
+    @media all and (min-width: $md-min) {
+      font-size: 3em;
+    }
+    @media all and (min-width: $lg-min) {
+      font-size: 3.3em;
+    }
     span {
       display: inline-block;
       background: white;
@@ -290,7 +346,7 @@ a {
 }
 //footer
 .footer-section {
-  padding: 3.25rem 0;
+  padding-top: 3.25rem;
   background: $themecolorDarkGrey;
   color: #fff;
   min-height: 400px;
@@ -381,6 +437,7 @@ a {
     }
     li.footer-logo {
       max-width: 100px;
+
       img {
         max-width: 100%;
       }
