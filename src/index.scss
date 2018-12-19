@@ -108,6 +108,11 @@ a {
     width: 100%;
     text-align: center;
     z-index: 3;
+
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     @media all and (min-width: $lg-min) {
       bottom: 20%;
     }
@@ -154,18 +159,18 @@ a {
 //navbar
 .nav {
   background: #3c3c3b;
-  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
   z-index: 200;
   pointer-events: none;
   opacity: 0;
   transition: opacity .6s;
   visibility: hidden;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 .links {
   padding: 10rem 0 0 0;
