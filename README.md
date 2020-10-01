@@ -1,25 +1,26 @@
 # Responsive project
 
 ## Description
-Assignment
+
+Assignment for employment as frontend developer Hogia
 
 ## Prerequisites
+
 NodeJS
 
 ## Installation
+
 To clone
 
-```git clone https://github.com/karinlj/Responsive-project.git && cd Responsive-project```
-
+`git clone https://github.com/karinlj/Responsive-project.git && cd Responsive-project`
 
 To install
 
-```npm install```
+`npm install`
 
 To run
 
-```npm start```
-
+`npm start`
 
 ## Learn More
 
