@@ -1,14 +1,14 @@
 # Responsive project for Hogia 2019
 
-## Description
+### Description
 
 Assignment for employment as frontend developer at Hogia 2019.
 
-## Prerequisites
+### Prerequisites
 
 NodeJS
 
-## Installation
+### Installation
 
 To clone
 
@@ -22,8 +22,12 @@ To run
 
 `npm start`
 
-## Learn More
+### Built With
+* React.js
+* Scss
+* Bootstrap 4
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Author
+* **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
