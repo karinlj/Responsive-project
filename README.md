@@ -1,4 +1,4 @@
-# Responsive project - Hogia 2019
+# Responsive project for Hogia 2019
 
 ## Description
 
