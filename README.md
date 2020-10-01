@@ -2,7 +2,7 @@
 
 ## Description
 
-Assignment for employment as frontend developer Hogia
+Assignment for employment as frontend developer at Hogia 2019.
 
 ## Prerequisites
 
